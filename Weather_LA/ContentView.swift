@@ -60,7 +60,7 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Divider()
                     ForEach(cityWeather.weeklyForecast){ forecast in
-                        HStack(spacing: 8){
+                        HStack(spacing: 16){
                             Text(forecast.day)
                                 .frame(width: 40, alignment: .leading)
                             Image(systemName: forecast.hourlyWeather.first!.condition.symbolName)
@@ -90,7 +90,7 @@ struct ContentView: View {
                 .padding()
                 .background(Color.black.opacity(0.1))
                 .cornerRadius(16)
-                .padding(.horizontal,24)
+                .padding(.horizontal, 24)
             }
         }
         .foregroundColor(.white)
